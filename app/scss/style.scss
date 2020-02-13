@@ -353,27 +353,38 @@
     padding: 20px 40px;
   }
 }
-// .author__title{
-//   width: 265px;
-//   font-size: 30px;
-//   line-height: 36px;
-//   color: #fff;
-//   margin-right: 45px;
-//   span{
-//     @include f700;
-//   }
-// }
-// .author__link{
-//   font-size: 18px;
-//   color: $bg;
-//   background-color: #fff;
-//   padding: 20px 40px;
-// }
-
 // end author
 
-
-
+// start tutorials
+.tutorials{
+  background-color: #fff;
+  padding: 60px 0 120px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    max-width: 370px;
+    width: 100%;
+    background-color: #f8f8f8;
+    &-img{
+      min-height: 270px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: block;
+    }
+    &-title{
+      display: block;
+      font-size: 24px;
+      color: $bg;
+      @include f700;
+      text-align: center;
+      padding: 30px 10px;
+    }
+  }
+}
+// end tutorials
 
 
 
