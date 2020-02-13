@@ -40,10 +40,10 @@ body{
   }
 }
 .title{
+  @include f700;
   color: $bg;
   font-size: 36px;
   line-height: 60px;
-  font-weight: 700;
   text-align: center;
   margin-bottom: 30px;
 }

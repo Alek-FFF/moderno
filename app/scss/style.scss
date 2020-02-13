@@ -51,7 +51,7 @@
   a{
     color: #fff;
     font-size: 14px;
-    font-weight: 500;
+    @include f500;
   }
 }
 
@@ -73,13 +73,13 @@
   &-title{
     font-size: 48px;
     line-height: 72px;
-    font-weight: 700;
+    @include f700;
     margin-bottom: 10px;
   }
   &-text{
     font-size: 20px;
     line-height: 30px;
-    font-weight: 500;
+    @include f500;
     margin-bottom: 50px;
   }
   &-form{
@@ -94,7 +94,7 @@
       box-shadow: 0px 1px 10px 0px rgba( 124, 178, 64, 0.75 );
       border: none;
       font-size: 14px;
-      font-weight: 500;
+      @include f500;
       padding-left: 25px;
       padding-right: 60px;
       &::placeholder{
@@ -126,7 +126,7 @@
   margin-bottom: 60px;
   button{
     font-size: 14px;
-    font-weight: 500;
+    @include f500;
     color: $bg;
     padding: 10px 21px;
     border: none;
@@ -167,7 +167,7 @@
     padding: 20px 30px 0;
     color: $bg;
     min-height: 90px;
-    font-weight: 500;
+    @include f500;
     border-bottom: 1px solid #e7ecf2;
   }
   &-name{
@@ -184,7 +184,7 @@
   }
   &-price{
     font-size: 20px;
-    font-weight: 700;
+    @include f700;
   }
   &-info{
     display: flex;
@@ -208,7 +208,7 @@
     }
     span{
       font-size: 14px;
-      font-weight: 500;
+      @include f500;
     }
   }
   &-star{
@@ -268,9 +268,63 @@
         outline: none;
       }
     }
-    
   }
 }
-
 // end product slider
+
+// start advanteges
+.advanteges{
+  background-color: $bg;
+  padding: 110px 0;
+}
+.advanteges__title{
+  color: #fff;
+  margin-bottom: 70px;
+}
+.advanteges__inner{
+  display: flex;
+  justify-content: space-between;
+}
+.advanteges__item{
+  width: 370px;
+  text-align: center;
+  padding: 0 15px;
+  &:hover{
+    .advanteges__item-images{
+      background-color: $green;
+    }
+    .advanteges__item-title{
+      color: $green;
+    }
+  }
+  &-images{
+    width: 113px;
+    height: 113px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px;
+    transition: all .5s;
+  }
+  &-title{
+    font-size: 24px;
+    @include f500;
+    color: #fff;
+    margin-bottom: 20px;
+    transition: all .5s;
+  }
+}
+// end advanteges
+
+
+
+
+
+
+
+
+
+
 
