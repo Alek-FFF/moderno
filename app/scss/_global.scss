@@ -1,6 +1,10 @@
 html{
   box-sizing: border-box;
 }
+html,
+body {
+	height: 100%;
+}
 *,
 *::before,
 *::after{
@@ -24,6 +28,17 @@ body{
   font-weight: 400;
   color: $text;
 }
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
 .container{
   max-width: 1200px;
   margin: 0 auto;
@@ -46,4 +61,37 @@ body{
   line-height: 60px;
   text-align: center;
   margin-bottom: 30px;
+}
+.page-content{
+  background-color: $grey;
+}
+
+.breadcrumbs{
+  &__inner{
+    padding: 45px 0 40px;
+  }
+  &__list{
+    li{
+      display: inline-block;
+      position: relative;
+      & + li{
+        padding-left: 24px;
+        &::before{
+          position: absolute;
+          content: "-";
+          color: $green;
+          left: 8px;
+        }
+      }
+      &:last-child{
+        a,
+        span{
+          color: $bg;
+        }
+      }
+    }
+    a{
+      color: #b0bec5;
+    }
+  }
 }
