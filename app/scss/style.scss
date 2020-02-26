@@ -78,9 +78,7 @@
     color: #a0a0a0;
     font-size: 14px;
   }
-  & + .header__circle{
-    margin-left: 15px;
-  }
+  
   span{
     position: absolute;
     text-align: center;
@@ -171,8 +169,19 @@
   overflow: hidden;
   transition: all .5s;
 }
+.circle__menu{
+  position: absolute;
+  top: 62px;
+  right: -20px;
+  border-top: 1px solid #e0e0e0;
+  height: 0;
+  overflow: hidden;
+}
 
-.user__box{
+.user__box,
+.basket__box,
+.message__box,
+.notification__box{
   position: relative;
   height: 90px;
   margin-top: 40px;
@@ -184,10 +193,113 @@
     }
   }
 }
+.basket__box,
+.message__box,
+.notification__box{
+  margin-top: 54px;
+  margin-left: 15px;
+  &:hover{
+    .header__circle::before{
+      color: $bg;
+    }
+    .circle__menu{
+      height: auto;
+      overflow: hidden;
+    }
+    .circle__item{
+      padding: 23px;
+      border-width: 1px;
+    }
+  }
+}
 
+.circle__item{
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 0px solid #e0e0e0;
+  border-top: none;
+  padding: 0 23px;
+  width: 269px;
+  position: relative;
+  transition: all .5s;
+  &::before{
+    position: absolute;
+    top: 27px;
+    right: 29px;
+    color: #b0bec5;
+    font-size: 16px;
+  }
+}
+.circle__images{
+  padding-right: 15px;
+}
+.circle__info-name{
+  @include f500;
+  color: $bg;
+}
+.circle__info-theme{
+  font-size: 12px;
+  color: $green;
+}
+.circle__info-price{
+  @include f500;
+  font-size: 16px;
+  color: #000;
+}
 
-
-
+.basket__summ{
+  background-color: #fff;
+  padding: 15px 16px 12px;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  @include f700;
+}
+.basket__title{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 11px;
+  padding-right: 23px;
+  font-size: 16px;
+  color: $bg;
+  margin-bottom: 15px;
+}
+.basket__btn{
+  font-size: 14px;
+  color: #fff;
+  background-color: $green;
+  padding: 8px 5px;
+  width: 102px;
+  text-align: center;
+}
+.basket__btn-checkout{
+  background-color: #e85647;
+  margin-left: 6px;
+  width: 122px;
+}
+.notification__menu,
+.message__menu{
+  .circle__images{
+    padding-right: 20px;
+  }
+  .circle__info{
+    line-height: 18px;
+    &-name{
+      @include f700;
+      font-size: 12px;
+    }
+    &-theme{
+      font-size: 11px;
+    }
+    &-date{
+      font-size: 10px;
+      color: #707070;
+    }
+  }
+}
+.icons__color::before{
+  color: $tomato;
+}
 
 // end header
 
@@ -1041,7 +1153,8 @@
   }
 }
 
-
-
-
 // end product-page
+
+
+
+@import '_media';
