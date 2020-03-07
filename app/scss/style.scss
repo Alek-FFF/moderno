@@ -308,12 +308,119 @@
 .menu__btn{
   display: none;
 }
-
 // end header
+
+//start modal
+#modal{
+  background-color: $green;
+  max-width: 730px;
+  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 100px;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: "\f00d";
+    font-family: 'icomoon';
+    font-size: 18px;
+    color: #fff;
+    top: 9px;
+    right: 15px;
+  }
+}
+.login__title{
+  font-size: 48px;
+  color: #fff;
+  @include f700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.login__wrapper{
+  form{
+    max-width: 400px;
+    margin: 0 auto;
+    label{
+      position: relative;
+      display: block;
+      &::before{
+        position: absolute;
+        font-family: 'icomoon';
+        font-size: 14px;
+        color: #fff;
+        left: 17px;
+        top: 9px;
+      }
+    }
+    .login__label-name::before{
+        content: "\f007";
+    }
+    .login__label-pass::before{
+        content: "\f023";
+    }
+    input{
+      height: 43px;
+      margin-bottom: 8px;
+      background-color: #76ae36;
+      color: #fff;
+      border: none;
+      font-size: 14px;
+      padding-left: 40px;
+      display: block;
+      width: 100%;
+      &::placeholder{
+        color: #fff;
+        font-size: 14px;
+      }
+    }
+  }
+  button{
+    margin-top: 12px;
+    width: 139px;
+    padding: 18px 0 16px;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #000;
+    @include f700;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    box-shadow: 0px 2px 2px 0px rgba(118, 174, 54, 0.75);
+  }
+  .creat-acc{
+    margin-top: 12px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #76ae36;
+    width: 246px;
+    text-align: center;
+    padding: 15px 0 15px 28px;
+    position: relative;
+    &::before{
+      content: "\f044";
+      position: absolute;
+      font-family: 'icomoon';
+      font-size: 18px;
+      top: 17px;
+      left: 35px;
+    }
+
+  }
+  .lost-pass{
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff;
+  }
+}
+.fancybox-button svg path {
+  fill: transparent;
+}
+//end modal
+
 
 
 // start search
-
 .search{
   min-height: 533px;
   background-repeat: no-repeat;
@@ -375,7 +482,6 @@
     }
   }
 }
-
 // end search
 
 
@@ -1490,12 +1596,93 @@ height: 37px;
     @include f500;
   }
 }
-
-
-
 //end product-one
 
 
+//start page-404
+.page-404__wrapper,
+.about__wrapper{
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  margin-bottom: 150px;
+}
+.page-404__head,
+.about__head{
+  font-size: 24px;
+  @include f500;
+  color: #444;
+  padding: 24px 28px;
+  border-bottom: 1px solid #dcdcdc;
+}
+.page-404__inner{
+  background-color: $green;
+  text-align: center;
+  color: #fff;
+}
+.page-404__404{
+  padding-top: 70px;
+  padding-bottom: 30px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 300px;
+  line-height: 300px;
+  font-weight: 800;
+  position: relative;
+  margin-right: 140px;
+  &::after{
+    content: "";
+    position: absolute;
+    background-image: url(../images/404.png);
+    width: 157px;
+    height: 301px;
+    margin-left: 15px;
+  }
+}
+.page-404__title{
+  font-size: 30px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  letter-spacing: 6px;
+  margin-bottom: 25px;
+}
+.page-404__text{
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  max-width: 535px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.page-404__link{
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 15px 35px;
+  margin-bottom: 100px;
+}
+//end page-404
+
+//start about
+.about__inner{
+  padding: 0 50px;
+}
+.about__box{
+  h3{
+    font-size: 20px;
+    @include f700;
+    color: #444;
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+  p{
+    color: #707070;
+    margin-bottom: 40px;
+  }
+}
+//end about
 
 
 @import '_media';
