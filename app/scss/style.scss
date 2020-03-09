@@ -1601,13 +1601,15 @@ height: 37px;
 
 //start page-404
 .page-404__wrapper,
-.about__wrapper{
+.about__wrapper,
+.contact__wrapper{
   border: 1px solid #dcdcdc;
   background-color: #fff;
   margin-bottom: 150px;
 }
 .page-404__head,
-.about__head{
+.about__head,
+.contact__head{
   font-size: 24px;
   @include f500;
   color: #444;
@@ -1683,6 +1685,116 @@ height: 37px;
   }
 }
 //end about
+
+//start contact
+.contact__head{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.contact__inner{
+  padding: 35px 40px 15px;
+}
+.contact__map{
+  margin-bottom: 50px;
+  height: 414px;
+  iframe{
+    width: 100%;
+    height: 414px;
+  }
+}
+.contact__box{
+  display: flex;
+}
+.contact__info{
+  max-width: 330px;
+  width: 100%;
+  margin-right: 30px;
+}
+.contact__info-item{
+  margin-bottom: 30px;
+  padding-left: 40px;
+}
+.contact__info-title{
+  font-size: 20px;
+  color: $bg;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 500;
+  padding-bottom: 18px;
+  margin-bottom: 20px;
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    width: 44px;
+    height: 4px;
+    background-color: $green;
+    bottom: 0;
+    left: 0;
+  }
+  &::before{
+    font-family: 'icomoon';
+    color: $green;
+    font-size: 24px;
+    position: absolute;
+    left: -40px;
+  }
+}
+.contact__info-content{
+  color: #707070;
+  max-width: 235px;
+}
+.contact__form-title{
+  font-size: 24px;
+  @include f500;
+  color: #333;
+  margin-bottom: 20px;
+}
+.contact__form-row{
+  display: flex;
+  justify-content: space-between;
+}
+.contact__form{
+  width: 100%;
+  input{
+    width: 350px;
+    height: 43px;
+    padding: 0 17px;
+    background-color: #f1f4f5;
+    border: none;
+    color: #7a7a7a;
+    margin-bottom: 28px;
+    &::placeholder{
+      color: #7a7a7a;
+    }
+    
+  }
+  textarea{
+    border: none;
+    padding: 13px 17px;
+    background-color: #f1f4f5;
+    max-width: 725px;
+    width: 100%;
+    height: 192px;
+    color: #7a7a7a;
+    display: block;
+    resize: none;
+    margin-bottom: 22px;
+    &::placeholder{
+      color: #7a7a7a;
+    }
+  }
+  button{
+    border: none;
+    font-size: 16px;
+    @include f700;
+    color: #fff;
+    background-color: $green;
+    text-transform: uppercase;
+    padding: 20px 5px;
+    width: 190px;
+  }
+}
+//end contact
 
 
 @import '_media';
