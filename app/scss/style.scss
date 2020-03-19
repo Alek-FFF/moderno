@@ -838,7 +838,8 @@
   color: #919699;
   text-align: center;
 }
-.footer__social-list{
+.footer__social-list,
+.profile__social-list{
   margin-bottom: 33px;
   li{
     display: inline-block;
@@ -1885,5 +1886,204 @@ height: 37px;
   }
 }
 //end settings
+
+//start profile
+.profile__inner{
+  display: flex;
+  margin-bottom: 20px;
+}
+.profile__aside{
+  margin-right: 30px;
+  max-width: 270px;
+  width: 100%;
+}
+.profile__content{
+  width: 100%;
+}
+.profile-status{
+  font-size: 13px;
+  color: #70838d;
+  padding: 3px 12px 3px 26px;
+  border: 1px solid #d3d3d3;
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    left: 9px;
+    top: 9px;
+  }
+}
+.profile-on{
+  &::before{
+    background-color: $green;
+  }
+}
+.profile-off{
+  &::before{
+    background-color: $red;
+  }
+}
+.profile__aside-btn{
+  margin-bottom: 13px;
+
+}
+.profile__aside-message{
+  margin-bottom: 17px;
+  background-color: #546e7a;
+  font-size: 16px;
+  @include f500;
+  color: #fff;
+  padding: 17px 10px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  position: relative;
+  box-shadow: 0px 1px 2px 0px rgba( 69, 90, 100, 0.75 );
+  &::before{
+    position: absolute;
+    content: "\f003";
+    font-family: 'icomoon';
+    left: 50px;
+    top: 15px;
+  }
+}
+.profile__aside-following{
+  margin-bottom: 17px;
+  background-color: #8bc34a;
+  font-size: 16px;
+  @include f700;
+  color: #fff;
+  padding: 16px 0;
+  width: 100%;
+  text-align: center;
+  display: block;
+  box-shadow: 0px 1px 2px 0px rgba( 69, 90, 100, 0.75 );
+}
+.profile__banner{
+  padding: 20px;
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+.profile__banner-images{
+  background-image: url(../images/content/banner.png);
+  min-height: 332px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.profile__items{
+  display: flex;
+}
+.profile__item{
+  font-size: 14px;
+  border: 1px solid #dcdcdc;
+  width: 25%;
+  height: 80px;
+  text-align: center;
+  padding: 18px 5px 15px;
+  background-color: #fff;
+  & + .profile__item{
+    border-left: none;
+  }
+}
+.profile__item-title{
+  @include f500;
+  color: $bg;
+}
+.profile__item-content{
+  color: #707070;
+  &.profile__item-sales{
+    color: $bg;
+  }
+}
+.profile-box{
+  background-color: #fff;
+  border: 1px solid #dedede;
+  padding: 35px 40px 25px;
+}
+.profile-box__title{
+  font-size: 20px;
+  color: $bg;
+  @include f700;
+  margin-bottom: 18px;
+}
+.profile-box__text{
+  margin-bottom: 20px;
+  p{
+    color: #707070;
+  }
+}
+.profile-box__item-head{
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: $bg;
+  margin-bottom: 10px;
+}
+.profile-box__item-name{
+  @include f500;
+  font-style: italic;
+}
+.profile-box__item-number{
+  @include f700;
+}
+.profile-box__item-line{
+  margin-bottom: 20px;
+  height: 15px;
+  width: 100%;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  span{
+    display: block;
+    height: 15px;
+    border-radius: 4px;
+    background-image: url(../images/pro-bar1.png);
+    background-repeat: repeat;
+  }
+}
+.profile__settings{
+  .product-one__tabs.settings__tabs{
+    .tabs span{
+      font-family: 'Roboto', sans-serif !important;
+      font-weight: 500;
+      color: #707070;
+      position: relative;
+      &::before{
+        font-family: 'icomoon';
+        position: absolute;
+        left: 24px;
+        top: 15px;
+        color: #d0d0d0;
+        font-size: 14px;
+      }
+      &.active{
+        color: $bg;
+        &::before{
+          color: $green;
+        }
+      }
+    }
+  }
+}
+
+  
+
+
+.gsgsgsd{
+  content: "\f105";
+  font-family: 'icomoon';
+  position: absolute;
+  left: 23px;
+  color: #d0d0d0;
+  font-size: 14px;
+}
+
+//end profile
+
+
 
 @import '_media';
