@@ -1855,6 +1855,16 @@ height: 37px;
 }
 .page__box-content{
   padding: 30px 35px 80px;
+  button{
+    @include f500;
+    background-color: $green;
+    color: #fff;
+    border: none;
+    padding: 12px 36px;
+    margin-left: 258px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
 }
 .settings__line{
   margin-bottom: 21px;
@@ -1883,6 +1893,38 @@ height: 37px;
     padding: 0 15px;
     font-size: 14px;
     color: #707070;
+  }
+  .jq-selectbox{
+    max-width: 540px;
+    width: 100%;
+  }
+  .jq-selectbox__select{
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid #dcdcdc;
+    border-bottom-color: #B3B3B3;
+    border-radius: 0px;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 14px;
+    line-height: 40px;
+    color: #707070;
+    text-shadow: none;
+  }
+  .jq-selectbox__trigger-arrow{
+    border: none;
+    font-size: 15px;
+    top: 0;
+    right: 20px;
+    line-height: 40px;
+    &::before{
+      font-family: 'icomoon';
+      content: "\f0d7";
+    }
+  }
+  .jq-selectbox__trigger{
+    border-left: none;
   }
 }
 //end settings
@@ -2124,9 +2166,6 @@ height: 37px;
   .jq-selectbox{
     width: 100%;
   }
-  option{
-  
-  }
   textarea{
     resize: none;
     height: 150px;
@@ -2154,7 +2193,6 @@ height: 37px;
     &::before{
       font-family: 'icomoon';
       content: "\f0d7";
-      
     }
   }
   .jq-selectbox__trigger{
@@ -2178,7 +2216,6 @@ height: 37px;
     height: 40px;
     padding: 0;
     padding-left: 100px;
-    // margin-left: 0px;
     border: none;
     border-bottom-color: transparent;
     border-radius: 0px;
