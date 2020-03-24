@@ -2069,20 +2069,147 @@ height: 37px;
     }
   }
 }
-
+//end profile
+//start upload
+.upload__inner{
+  background-color: #fff;
+  border: 1px solid #dcdcdc;
+  margin-bottom: 105px;
+  button{
+    @include f500;
+    background-color: $green;
+    color: #fff;
+    border: none;
+    padding: 12px 36px;
+    margin-left: 170px;
+    cursor: pointer;
+  }
+}
+.upload__inner-title{
+  font-size: 24px;
+  @include f500;
+  color: $bg;
+  padding: 18px 33px;
+}
+.upload__inner-content{
+  padding: 40px 45px 60px;
+  border-top: 1px solid #dcdcdc;
+}
+.upload__line{
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  label{
+    color: #444;
+    padding-right: 15px;
+    min-width: 170px;
+    span{
+      color: $green;
+      font-size: 24px;
+    }
+  }
+  input,
+  select,
+  textarea{
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: #f9f9f9;
+    border: 1px solid #dcdcdc;
+    padding: 0 18px;
+    &::placeholder{
+      color: #707070;
+    }
+  }
+  .jq-selectbox{
+    width: 100%;
+  }
+  option{
   
-
-
-.gsgsgsd{
-  content: "\f105";
-  font-family: 'icomoon';
-  position: absolute;
-  left: 23px;
-  color: #d0d0d0;
-  font-size: 14px;
+  }
+  textarea{
+    resize: none;
+    height: 150px;
+    padding: 8px 18px;
+  }
+  .jq-selectbox__select {
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid #dcdcdc;
+    border-bottom-color: #dcdcdc;
+    border-radius: 0px;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: 'Roboto-Regular', sans-serif;
+    line-height: 40px;
+    color: #707070;
+    text-shadow: none;
+  }
+  .jq-selectbox__trigger-arrow{
+    border: none;
+    font-size: 15px;
+    top: 0;
+    right: 20px;
+    line-height: 40px;
+    &::before{
+      font-family: 'icomoon';
+      content: "\f0d7";
+      
+    }
+  }
+  .jq-selectbox__trigger{
+    border-left: none;
+  }
+  .jq-selectbox__dropdown{
+    top: 37px;
+  }
+  .jq-file{
+    width: 100%;
+    height: 40px;
+    border-radius: 0px;
+    box-shadow: none;
+    background-color: #f9f9f9;
+    border: 1px solid #dcdcdc;
+    padding: 0 18px;
+  }
+  .jq-file__name{
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    padding-left: 100px;
+    // margin-left: 0px;
+    border: none;
+    border-bottom-color: transparent;
+    border-radius: 0px;
+    background: transparent;
+    box-shadow: none;
+    line-height: 40px;
+    font-size: 12px;
+    color: #707070;
+  }
+  .jq-file__browse{
+    top: 7px;
+    right: auto;
+    left: 9px;
+    padding: 0 12px;
+    height: 25px;
+    border: 1px solid #dcdcdc;
+    border-left: 1px solid #dcdcdc;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    text-shadow: none;
+    text-align: center;
+    line-height: 26px;
+    font-size: 12px;
+    color: #444;
+  }
+  
 }
 
-//end profile
+
+//end upload
 
 
 
