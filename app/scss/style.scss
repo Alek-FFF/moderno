@@ -484,11 +484,15 @@
 }
 // end search
 
-
 // start products
 .products{
   padding: 110px 0;
   background-color: $grey;
+}
+.products__wrapper,
+.product__slider-wrapper{
+  max-width: 1920px;
+  margin: 0 auto;
 }
 .products__inner-btn{
   text-align: center;
@@ -513,8 +517,13 @@
 }
 .products__inner-box{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  margin-left: -30px;
   flex-wrap: wrap;
+}
+.products .product__item{
+  flex-basis: calc(25% - 30px);
+  margin-left: 30px;
 }
 .product__item{
   max-width: 442px;
@@ -1133,10 +1142,10 @@
     color: #707070;
   }
 }
-
 .product-page__content{
   .product__item{
-    max-width: 270px;
+    flex-basis: calc(33.333% - 30px);
+    margin-left: 30px;
     transition: all .5s;
   }
   .product__item-img{
@@ -1162,8 +1171,9 @@
 .product-page__items{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 30px;
+  margin-left: -30px;
 }
 .pagination__list{
   li{
@@ -1232,6 +1242,7 @@
 .product__item{
   &.list{
     max-width: 100%;
+    flex-basis: 100%;
     .product__item-img{
       width: 240px;
       float: left;
@@ -1295,7 +1306,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 18px 0;
+  margin: 18px;
 }
 .product-one__title{
   font-size: 30px;
@@ -1314,7 +1325,7 @@
   margin-bottom: 55px;
   display: flex;
   justify-content: space-between;
-
+  text-align: center;
 }
 .product-one__link{
   a{
@@ -1369,7 +1380,6 @@
 .icon-pinterest-p{
   background-color: #d32f2f;
 }
-
 .tabs{
   display: flex;
   align-items: center;
@@ -1408,9 +1418,8 @@
   line-height: 36px;
   color: #707070;
   column-count: 2;
+  column-gap: 20px;
 }
-
-
 .product-one__more{
   margin-top: 55px;
 }
@@ -1563,8 +1572,6 @@ background-image: url(../images/awards/award5.png);
 width: 34px;
 height: 37px;
 }
-
-
 .aside__item-sales{
   padding-top: 17px;
   font-size: 16px;
@@ -1697,7 +1704,6 @@ height: 37px;
 }
 .contact__map{
   margin-bottom: 50px;
-  height: 414px;
   iframe{
     width: 100%;
     height: 414px;
@@ -1796,6 +1802,7 @@ height: 37px;
   }
 }
 //end contact
+
 //start settings
 .settings{
   padding-bottom: 150px;
@@ -1835,7 +1842,6 @@ height: 37px;
   }
   
   .tab_content{
-    max-width: 870px;
     width: 100%;
     padding: 0;
     border: none;
@@ -1869,10 +1875,11 @@ height: 37px;
 .settings__line{
   margin-bottom: 21px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   label{
+    width: 255px;
     color: #444;
+    padding-right: 10px;
   }
   input{
     max-width: 540px;
@@ -1880,7 +1887,7 @@ height: 37px;
     height: 40px;
     background-color: #f9f9f9;
     border: 1px solid #dcdcdc;
-    padding: 0 15px;
+    padding: 0 10px;
     font-size: 14px;
     color: #000;
   }
@@ -1902,7 +1909,7 @@ height: 37px;
     height: 40px;
     padding: 0 15px;
     border: 1px solid #dcdcdc;
-    border-bottom-color: #B3B3B3;
+    border-bottom-color: #dcdcdc;
     border-radius: 0px;
     background: #f9f9f9;
     box-shadow: none;
@@ -2112,6 +2119,7 @@ height: 37px;
   }
 }
 //end profile
+
 //start upload
 .upload__inner{
   background-color: #fff;
